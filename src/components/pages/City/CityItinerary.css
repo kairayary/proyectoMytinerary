@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+
+.banner{
+    width: 90%;
+    height:150px;
+    border: transparent;
+    margin: auto;
+    background-size: 100% 100%;
+    animation: banner 10s infinite;
+    animation-direction: alternate;
+   
+   
+}
+
+@keyframes banner {
+    0%, 30% {
+       
+        opacity: 1;
+     
+    }
+    31%, 34% {
+        
+        opacity: 0.1;
+    }
+
+    35%, 65% {
+        
+        opacity: 1;
+    }
+    66%, 69% {
+        
+        opacity: 0.1;
+    }
+
+    70%, 100% {
+        opacity: 1;
+       
+    }
+}
+
+.txts{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+}
+.txt{
+    text-align: center;
+    font-family:   'Playfair Display', serif!important;
+    padding-top: 13px;
+    
+}

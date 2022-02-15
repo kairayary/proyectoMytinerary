@@ -1,0 +1,43 @@
+
+.townfather{
+    display: flex;
+   
+}
+.town{
+    width: 50%;
+    border-right: solid 1px;
+    padding: 1em;
+}
+
+.townTitleLg{
+    display: flex;
+    text-align: right;
+    justify-content: flex-end
+
+}
+.p{
+    align-content: center;
+}
+.townImg{
+   
+    display: flex;
+    justify-content:center ;
+
+}
+.townItems{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: row;
+    margin-left: 2em;
+    align-content: space-between;
+    flex-wrap: wrap;
+
+    
+}
+.items1{
+    margin-right: 7em;
+}
+
+.containerItinerary{
+    display: flex;
+}

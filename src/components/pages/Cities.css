@@ -1,0 +1,16 @@
+.containercities{
+    background: rgb(235,200,237);
+background: linear-gradient(41deg, rgba(235,200,237,1) 29%, rgba(171,237,215,1) 57%, rgba(240,194,114,1) 90%);
+ 
+    width: 100%;
+    height: 100%;
+}
+.textocities{
+    margin-top: 5px;
+    font-size: 30px ;
+    left: 90px;
+    text-align: center;
+    font-family:   'Playfair Display', serif!important;
+    color: #d2691e;
+    text-shadow: 0 0 2px rgb(12, 12, 12);
+}
