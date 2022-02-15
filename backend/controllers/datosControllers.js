@@ -1,5 +1,5 @@
 const Cities = require("../models/cities.js")
-// const Itinerary = require("../models/itinerary.js")
+const Itinerary = require("../models/itinerary.js")
 
 const citiesController = {
   ObtenerDatosCompletos: async (req, res) => {// recibe una petición y en relación a esta da una repuesta ( req= requiere, res= response)
@@ -24,24 +24,24 @@ const citiesController = {
     })
   },
 
-  // ObtenerItinerarios:async(req,res) => {
-  //   console.log(res)
-  //   let itinerary;
-  //   let error = null
-  //   try {
-  //     itinerary = await Itinerary.find()
-  //     console.log(itinerary)
+   ObtenerItinerarios:async(req,res) => {
+     console.log(res)
+     let itinerary;
+     let error = null
+     try {
+       itinerary = await Itinerary.find()
+       console.log(itinerary)
   
-  //   } catch (err){
-  //     error = err
-  //     console.log(error)
-  //   }
-  //   res.json({
-  //     response:error?"ERROR":{itinerary},
-  //     success:error?false:true,
-  //     error:error
-  //   })
-  // }
+     } catch (err){
+       error = err
+       console.log(error)
+     }
+     res.json({
+       response:error?"ERROR":{itinerary},
+       success:error?false:true,
+      error:error
+     })
+   }
   
 }
 

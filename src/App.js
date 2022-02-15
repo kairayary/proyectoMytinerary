@@ -40,14 +40,13 @@ function App() {
 },[])
 
 
-// const itinerary =[]
+ const itinerary =[]
 
-// axios.get("http://localhost:4000/api/itinerary")
-// .then(response =>{
+axios.get("http://localhost:4000/api/itinerary")
+ .then(response =>{
+ itinerary.push(...response.data.response.itineary)
 
-// itinerary.push(...response.data.response.itineary)
-
-// },[])
+ },[])
     
 
   return (
