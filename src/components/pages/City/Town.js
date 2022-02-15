@@ -26,7 +26,7 @@ function Town() {
           </div>
           <div className="townTitleXs">
             <p >
-              A coastal city on the island of Palawan, in the west of Philippines,
+              A  coastal city on the island of Palawan, in the west of Philippines,
               it offers many spas and seafood restaurants as a tourist city.
             </p>
           </div>
