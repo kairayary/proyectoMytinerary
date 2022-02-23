@@ -121,7 +121,7 @@ const Slideshow = () => {
            </Slide>
            <Slide>
               <div>
-                 <img src={require("../Imagen/NuevaZelanda.Oceania.jpg")} width={"550px"} height={"300px"}/>
+                 <img src={require("../Imagen/Australia.Oceania.jpg")} width={"550px"} height={"300px"}/>
               </div>
               <TextoSlide>
                  <p> OCEANIA</p>

@@ -12,7 +12,7 @@ main{
   overflow: hidden;
   font-size: 30px;
   text-align: center;
-  font-family: 'Playfair Display', serif!important;
+  font-family: 'Playfair Display', serif;
   color: #d2691e;
   text-shadow: 0 0 2px rgb(12, 12, 12);
 }

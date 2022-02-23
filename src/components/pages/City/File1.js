@@ -1,5 +1,5 @@
 import React from 'react';
-import File from "./File";
+
 import puertoPrincesa from "../../Imagen/puertoPrincesa.jpg";
 
 

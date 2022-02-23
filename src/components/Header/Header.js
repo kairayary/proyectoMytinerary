@@ -1,6 +1,7 @@
 import "./Header.css";
-import Post from "../Post/Post";
+import Post from "../PostHome/Post";
 import viajar from "../Imagen/viajar.jpeg";
+import Paris from "../Imagen/Paris.Europa.jpg"
 import Suiza from "../Imagen/Suiza.Europa.jpg";
 import Egipto from "../Imagen/Egipto.Africa.jpg";
 import Singapur from "../Imagen/Singapur.Asia.jpg";
@@ -76,6 +77,15 @@ function Header() {
           likes= {<AiTwotoneLike/>} 
           comment = {<FaRegComment/>}/>
         }
+
+         <Post
+          img={Paris}
+          title="PARIS"
+          description="One of the most important cities in Brazil, with a spectacular climate that
+          let enjoy any of its beautiful beaches and tourist attractions. "
+          likes= {<AiTwotoneLike/>} 
+          comment = {<FaRegComment/>}/>
+        
       </div>
     </div>
   );

@@ -1,11 +1,15 @@
+import React from "react";
+
+
 import Slideshow from "../Slide/Slideshow";
 import styled from "styled-components";
 import Search from "../SearchInput/Search";
 
-import Cards from "../Cards/Cards";
+import Cards from "../CardsCities/Cards";
 import "./Cities.css";
 
 function Cities(props) {
+ 
   
 const cities = props.data
 
@@ -24,7 +28,7 @@ const cities = props.data
         </div>
       <div className="wrapper">
         
-        <Cards cities= {cities}/>
+        <Cards />
          {/*  img={Japon}
           alt=""
           title="JAPAN"

@@ -1,51 +1,43 @@
-@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+.heading {
+  width: 100%;
+  display: flex;
+ 
+}
+.headingItem{
 
-.banner{
-    width: 90%;
-    height:150px;
-    border: transparent;
-    margin: auto;
-    background-size: 100% 100%;
-    animation: banner 10s infinite;
-    animation-direction: alternate;
-   
-   
+display: flex;
+flex-direction: row;
+width: 60%;
+justify-content: space-around;
+flex-wrap: wrap;
+align-content: flex-start;
+border-radius: 150px;
+
+}
+.headingItem img{
+
+width: 200px;
+
+border-radius: 50%;
+}
+.heading-Items{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+ 
 }
 
-@keyframes banner {
-    0%, 30% {
-       
-        opacity: 1;
-     
-    }
-    31%, 34% {
-        
-        opacity: 0.1;
-    }
+.haedingTitle{
 
-    35%, 65% {
-        
-        opacity: 1;
-    }
-    66%, 69% {
-        
-        opacity: 0.1;
-    }
-
-    70%, 100% {
-        opacity: 1;
-       
-    }
+display: flex;
+align-items: center;
 }
 
-.txts{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 5%;
-}
-.txt{
-    text-align: center;
-    font-family:   'Playfair Display', serif!important;
-    padding-top: 13px;
-    
+.headingText{
+  margin-top: 15px;
+  font-size: 30px ;
+  left: 90px;
+  color: #23394d;
+  text-align: center;
+  text-shadow: 0 0 5px whitesmoke;
 }
