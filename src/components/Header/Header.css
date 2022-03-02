@@ -37,7 +37,7 @@
     text-shadow: 0 0 2px rgb(12, 12, 12);
 }
 .headerImg{
-    
+    padding: .5rem;
     margin-top: 45px;
     object-fit: cover; 
    
