@@ -11,6 +11,7 @@ const citiesSchema = new mongoose.Schema({
      region:{ type: String, requiere: true},
      demonym:{ type: String, requiere: true},
      img:{ type: String, requiere: true},
+     flag:{ type: String, requiere: true},
 })
 
 const City= mongoose.model("Cities", citiesSchema)
