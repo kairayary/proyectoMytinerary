@@ -37,40 +37,37 @@ function Header() {
       </div>
 
       <div className="wrapper">
+
+      <Post
+          img={Paris}
+          title="PARIS"
+          description="Explore the quaint cobblestone streets, sweet pastry shops and cozy little 
+          bistros that lure you in with a glass of Beaujolais. Make Paris yours. "
+          likes= {<AiTwotoneLike/>} 
+          comment = {<FaRegComment/>}/>
+
         <Post img={Suiza} 
         title="SWISS" 
         description="In the heart of Europe lies this alpine country with dreamlike landscapes.
         Its towns and cities enjoy a charm that does not conflict with modernity."
         likes= {<AiTwotoneLike/>} 
         comment = {<FaRegComment/>}/>
-        
-
-        <Post
-          img={Egipto}
-          title="EGYPTO"
-          description="Where the word Pharaonic is not an adjective. The fascinating story of one of the
-          more acentral civilizations is present throughout its territory."
-          likes= {<AiTwotoneLike/>} 
-          comment = {<FaRegComment/>}/>
-        
-        <Post
-          img={Singapur}
+          
+        <Post img={Singapur}
           title="SINGAPORE"
           description="This little island is a study in fusions and contrasts, you will find
           tranquil parks bordering futuristic skyscrapers and luxury shopping malls."
           likes= {<AiTwotoneLike/>} 
           comment = {<FaRegComment/>}/>
         
-        <Post
-          img={Polinesia}
+        <Post img={Polinesia}
           title="POLYNESIA"
           description="With 118 islands and atolls in the Pacific Ocean, it is an ideal destination for relaxation,
           enjoy its beaches and do water activities."
           likes= {<AiTwotoneLike/>} 
           comment = {<FaRegComment/>}/>
         {
-        <Post
-          img={SaoPaulo}
+        <Post img={SaoPaulo}
           title="SAO PAULO"
           description="One of the most important cities in Brazil, with a spectacular climate that
           let enjoy any of its beautiful beaches and tourist attractions. "
@@ -78,13 +75,12 @@ function Header() {
           comment = {<FaRegComment/>}/>
         }
 
-         <Post
-          img={Paris}
-          title="PARIS"
-          description="One of the most important cities in Brazil, with a spectacular climate that
-          let enjoy any of its beautiful beaches and tourist attractions. "
+        <Post img={Egipto}
+          title="EGYPTO"
+          description="Where the word Pharaonic is not an adjective. The fascinating story of one of the
+          more acentral civilizations is present throughout its territory."
           likes= {<AiTwotoneLike/>} 
-          comment = {<FaRegComment/>}/>
+          comment = {<FaRegComment/>}/>  
         
       </div>
     </div>
