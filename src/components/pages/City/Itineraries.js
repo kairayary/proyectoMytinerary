@@ -25,7 +25,8 @@ function Itineraries(props) {
                             </div>
                             <div className="property-description">
                                 <h2>{itin.city}</h2>
-                                <h4>There are too many adventures out there waiting to be lived</h4>
+                                <h4>{itin.name}</h4>
+                                
 
                             </div>
 
@@ -36,6 +37,7 @@ function Itineraries(props) {
                         </div>
                         <div className="property-content">
                             <div className="property-text">
+                                
                                 <span>{itin.description}</span>
                                 </div>   
                                 <div className="property-texts">
