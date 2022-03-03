@@ -33,7 +33,7 @@ function City() {
     <div className="city">
 
       <Town citySelecter={citySelecter} />
-      <CityItinerary />
+      <CityItinerary citySelecter={citySelecter}/>
       <Itineraries itineraries={itineraries}/>
       {/* itinerarySelecter={itinerarySelecter} */}
 
