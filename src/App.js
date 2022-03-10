@@ -30,7 +30,7 @@ function App() {
 
     axios.get("http://localhost:4000/api/datos")
       .then(response => {
-        dispatch({
+        dispatch({// manda el dato al entorno
           type: actionType.CITIESDB,
           cities: response.data.response.cities
         })
