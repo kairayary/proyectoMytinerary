@@ -2,19 +2,25 @@ import React from "react";
 import "../Register/Register.css";
 import { Link as Linkrouter } from "react-router-dom";
 import axios from "axios";
+import Google from "../../ButtomSignup/GoogleButtom";
+import Facebook from "../../ButtomSignup/FacebookButtom";
+
 
 function Register() {
 
+  
   async function NewUser(event) {
     event.preventDefault()
+
     const NuevoUsuario = {
       firstname: event.target[0].value,
       lastname: event.target[1].value,
       email: event.target[2].value,
-      password: event.target[3].value
+      password: event.target[3].value,
+      from:"signup"//si el usuario se carga a través de google no se pide la verificación
     }
-    console.log(NuevoUsuario)
-    console.log(event)
+    // console.log(NuevoUsuario)
+    // console.log(event)
 
 
        await axios.post("http://localhost:4000/api/signup",{NuevoUsuario})
@@ -24,14 +30,16 @@ function Register() {
            // }
           displayMessages(response.data) //para validar los datos
 
-         )
+         );
       function displayMessages(data){
          if(data.success==="falseVAL"){
            console.log(data)
-          console.log(data.response.error.details)
-         alert(data.response.error.details.map(error=>error.message))
-         }else if(data.success==="trueUE"){
-           console.log(data)
+          console.log(data.response.error.details);
+         alert(data.response.error.details.map((error)=>error.message));
+         }else if(data.success===true){
+           console.log(data);
+         }else if(data.success==false){
+           console.log(data);
          }
 
       }
@@ -76,6 +84,12 @@ function Register() {
           <Linkrouter to="/login">
             <button type="submit" className="registerLoginButton">Login</button>
           </Linkrouter>
+
+        <div className='facebook mt-1'>
+        <Google/>
+        <Facebook/>
+        </div>
+
         </div>
       </div>
     )

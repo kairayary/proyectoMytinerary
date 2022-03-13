@@ -6,7 +6,7 @@ const validator = (req,res,next)=>{
 
     const Schema=joi.object({
 
-        firstname:joi.string().max(10).min(3).trim().pattern(new RegExp("[a-zA-Z]")).required().messages({
+        firstname:joi.string().max(20).min(3).trim().pattern(new RegExp("[a-zA-Z]")).required().messages({
             "string.min": "Name must contain at least 3 charracters",
             "string.empty": "Field cannot be empty"
         }),
@@ -18,11 +18,12 @@ const validator = (req,res,next)=>{
             "string.email": "The format is wrong"
 
         }),
-        password:joi.string().max(18).min(6).pattern(/(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])/).required().messages({
+        password:joi.string().max(30).min(6).pattern(/(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])/).required().messages({
             "string.pattern.base":"The password must contain at least one uppcarse letter, one lowercase letter and one number",
             "string.min":"The password must contain at least 6 alphanumeric characters",
-            "string.max":"The password must not exceed 18 characters"
+            "string.max":"The password must not exceed 30 characters"
         }),
+        from:joi.string()
     })
     const validation = Schema.validate(req.body.NuevoUsuario,{abortEarly:false})
 

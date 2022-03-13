@@ -60,17 +60,14 @@ const Navbar = () => {
             </MenuItem>
 
             <MenuItem onClick={() => setShowMobileMenu(!showMobileMenu)}>
+            {!user?
               <LinkRouter to ="/Login">
                 <ItemLink><FaUserCircle /></ItemLink>
               </LinkRouter>
-              
+            :<div onClick={()=>cerrarSesion(window.location.reload(true))}><ItemLink><FaUserSlash/></ItemLink></div>}  
             </MenuItem>
             
-            <MenuItem onClick={() => setShowMobileMenu(!showMobileMenu)}>
-              {!user?
-              <LinkRouter to ="/Login"><ItemLink><FaUserSlash/></ItemLink></LinkRouter>
-              :<div onClick={()=>cerrarSesion(window.location.reload(true))}><ItemLink><FaUserSlash/></ItemLink></div>}
-            </MenuItem>
+    
           </Menu>
         </IconContext.Provider>
       </Cover>
