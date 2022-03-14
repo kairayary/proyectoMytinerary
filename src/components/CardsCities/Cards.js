@@ -4,12 +4,12 @@ import { useStateValue } from "../../StateProvider";
 import "../CardsCities/CardStyle.css";
 
 function Cards() {
-    const [{ cities }, dispatch] = useStateValue()
+    const [{filterCity}, dispatch] = useStateValue()
     //const cities = props.cities;
 
     return (
         <>
-            {cities.map((city) =>( 
+            {filterCity?.map((city) =>( 
                 <div className="card">
                     <div className="card_body">
                         <img src={process.env.PUBLIC_URL + `/Imagenes/City/${city.img}`} className="card_image" />
