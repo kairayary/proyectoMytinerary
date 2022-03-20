@@ -21,7 +21,7 @@ import axios from "axios";
 
 
 function App() {
-  const [{ cities, itineraries}, dispatch] = useStateValue()
+  const [{ cities, itineraries }, dispatch] = useStateValue()
   //const data =[]
 
   async function test() { }
@@ -34,15 +34,8 @@ function App() {
           type: actionType.CITIESDB,
           cities: response.data.response.cities
         })
-        // axios.get("http://localhost:4000/api/itinerary")
-        //   .then(response => {
-        //     dispatch({
-        //       type: actionType.ITINERARIESDB,
-        //       itineraries: response.data.response.itinerary // este itinerary es el declarado en datocontroller 
-        //     })
-        //     console.log(itineraries)
-        //   });
-         })
+
+      })
   }, [])
 
 

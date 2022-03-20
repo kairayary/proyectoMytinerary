@@ -1,5 +1,5 @@
 
-.file {
+/* .file {
     position:relative;
     width: 400px;
     height: 350px;
@@ -26,14 +26,14 @@
 }
 .file:hover .image img {
     opacity: .5;
-    transform: translateX(30%);/*100%*/
+    transform: translateX(30%);
     border-radius: 2rem;
 }
 .details {
     position: absolute;
     top: 0;
     left: 0;
-    width: 70%;/*100%*/
+    width: 70%;
     height: 100%;
     background:  rgba(171,237,215,1);
     transition: .5s;
@@ -81,6 +81,6 @@
     margin: 0 5px;
     float: left;
    
-}
+} */
 
 

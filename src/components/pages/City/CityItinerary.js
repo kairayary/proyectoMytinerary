@@ -43,6 +43,8 @@ const city = props.citySelecter
 
                 <span>Select the options and find the perfect itineraries for you... THE ADVENTURE BEGINS!</span>
             </div>
+
+           
         </>
     );
 

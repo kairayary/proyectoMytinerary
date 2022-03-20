@@ -4,6 +4,8 @@ const{ObtenerDatosCompletos, ObtenerItinerarios}= datosController// extrae la co
 const usersControllers =require("../controllers/usersControllers")
 const{nuevoUsuario, verifyEmail, accesoUsuario,cerrarSesion} = usersControllers
 const validator = require("../controllers/validator")
+const commentControllers =require ("../controllers/comentariosControllers");
+const {cargarComentarios, obtenerComentarios, borrarComentario,modificarComentario} = commentControllers
 
 
 Router.route("/datos")// datos es parte de la url de la consulta
@@ -22,6 +24,16 @@ Router.route("/signin")
 
 Router.route("/signout")
 .post(cerrarSesion)
+
+Router.route("/comments")
+.post(cargarComentarios)
+
+Router.route("/comments/:id")
+.get(obtenerComentarios)
+.delete(borrarComentario)
+ .put(modificarComentario)// esta ruta me escoñeta todo
+
+
 
 
 

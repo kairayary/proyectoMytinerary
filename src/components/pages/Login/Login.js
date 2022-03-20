@@ -10,6 +10,7 @@ import "../Login/Login.css";
 
 
 
+
 function Login() {
 
   const [{ user }, dispatch] = useStateValue()//estructura para traer datos 
@@ -186,6 +187,8 @@ function Login() {
             fields="name,email,picture"
             callback={responseFacebook} />
         </div>
+
+        
       </div>
     </div>
   );

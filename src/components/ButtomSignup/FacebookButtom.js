@@ -1,6 +1,8 @@
 import React from "react";
 import FacebookLogin from "react-facebook-login";
 import axios from "axios";
+import swal from 'sweetalert';
+
 
 function Facebook() {
 
@@ -27,9 +29,12 @@ function Facebook() {
             if (data.success === "falseVAL") {
                 //  console.log(data)
                 // console.log(data.response.error.details)
-                alert(data.response.error.details.map(error => error.message))
+                swal(data.response.error.details.map(error => error.message), "You clicked the button!", "error");
+                // alert(data.response.error.details.map(error => error.message))
+
             } else if (data.success === true) {
-                console.log(data)
+                // console.log(data)
+                swal((data),"You clicked the button!", "success")
             }
 
         }

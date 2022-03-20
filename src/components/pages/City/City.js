@@ -36,7 +36,7 @@ function City() {
       <CityItinerary citySelecter={citySelecter}/>
       <Itineraries itineraries={itineraries}/>
       {/* itinerarySelecter={itinerarySelecter} */}
-
+      
 
 
     </div>

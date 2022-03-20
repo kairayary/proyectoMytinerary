@@ -1,7 +1,7 @@
 import React from "react";
 import GoogleLogin from "react-google-login";
 import axios from "axios";
-
+import swal from 'sweetalert';
 
 function Google() {
 
@@ -25,11 +25,15 @@ function Google() {
 
             )
         function displayMessages(data) {
-            if (data.success === "falseVAL") {
+            if (data.success === "falseVal") {
                 //  console.log(data)
                 // console.log(data.response.error.details)
-                alert(data.response.error.details.map(error => error.message))
+                // console.log(data.response.error.details)
+                
+            //  swal(data.response.error.details.map(error => error.message), "You clicked the button!", "error");
+                 alert(data.response.error.details.map(error => error.message))
             } else if (data.success === true) {
+                // swal(data.response,"You clicked the button!", "success")
                 console.log(data)
             }
 
