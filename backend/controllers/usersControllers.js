@@ -63,17 +63,17 @@ const usersControllers = {
         }
     },
     nuevoUsuario: async (req, res) => {
-
-        const { firstname, lastname, email, password, from } = req.body.NuevoUsuario
+         //mando un objeto 
+        const { firstname, lastname, email, password, from } = req.body.NuevoUsuario//este NuevoUsuario es el parámetro de axios
         console.log(req.body)
-        try {
+        try {//busca el usuario en la base de datos el email
             const UsuarioExiste = await User.findOne({ email })
-
+           // si encuentra el email genera la respuesta de que ya existe
             if (UsuarioExiste) {
-                // res.json({ success: "falseUE", response: "User already exists, login" })se saca porque ahora se trabaja desde los condiconales internos
+                //  res.json({ success: "falseUE", response: "User already exists, login" })se saca porque ahora se trabaja desde los condiconales internos
 
 
-                // else {//aqui es si el usuario exite, para que cada vez que acceda lo haga con su cuenta google
+                // else { //aqui es si el usuario exite, para que cada vez que acceda lo haga con su cuenta google
                 if (from !== "signup") {
 
                     const passwordHash = bcryptjs.hashSync(password, 10)

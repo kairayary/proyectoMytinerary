@@ -1,4 +1,4 @@
-const mongoose = require ("mongoose")// trae los datos de las ciudades y la conecta
+const mongoose = require ("mongoose")// trae los datos de los usuarios y la conecta
 
 const usersSchema = new mongoose.Schema({
 

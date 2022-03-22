@@ -28,9 +28,9 @@ function Itineraries(props) {
 
                 <div className="centrado">
 
-
+               
                     <div className="center">
-
+                       <div className="d-flex">
                         <div className="property-card">
 
                             <div className="property-image"  >
@@ -69,15 +69,19 @@ function Itineraries(props) {
                             </div>
                             <div className="property-bottoms">
                                 {/* <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Comments</button> */}
-                                <button className="comment-btn">Comments</button>
-                                <button className="likes-btn">Likes</button>
+                                 <button className="comment-btn">Comments</button>
+                                <button className="likes-btn">Likes</button> 
 
                             </div>
                             {/* el valor de itin._id se lo paso como props a al componente Comments */}
-                         <Comment itinerario={itin._id}/>  
+                          
                         </div>
+                        </div>
+                        <div className="styleComments">
+                        <Comment itinerario={itin._id}/>
+                        </div> 
                     </div>
-
+                   
                 </div>
 
             ))}

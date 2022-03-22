@@ -14,15 +14,15 @@ const Slideshow = () => {
     const Upcoming = () =>{
         //compruebo que el slide tiene elementos
         if ( slideshow.current.children.length > 0) {
-
+         // console.log(slideshow.current.children)
             //obtengo el primer elemento del slideshow
             const firtsElement = slideshow.current.children[0];
 
             // Estblece la transición
             slideshow.current.style.transition = `300ms ease-out all`;
 
-            const sizeSlideshow = slideshow.current.children[0].offsetWidth;
-
+             const sizeSlideshow = slideshow.current.children[0].offsetWidth;
+             
             //Mover el Slideshow
             slideshow.current.style.transform = `translateX(-${sizeSlideshow}px)`;
 

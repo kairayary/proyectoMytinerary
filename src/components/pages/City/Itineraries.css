@@ -27,6 +27,7 @@ h5
   width:60%;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   border-radius: 16px;
   overflow: hidden;
@@ -151,6 +152,12 @@ h5
 .property-card:hover .property-image
 {
   height:22em;
+}
+.styleComments{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
 }
 
 /* .property-card:hover .property-social-icons
