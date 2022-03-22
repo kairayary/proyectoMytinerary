@@ -31,7 +31,13 @@ const reducer = (state, action) => {
                 user: action.user
             }
         case "FILTER":
-            const filterCity= state.cities.filter(city=>city.name.toLowerCase().startsWith(action.value.toLowerCase().trim()))
+            const filterCity =[]
+            if(action.value.filterBy ==="Select the City"){
+               filterCity.push(...state.cities.filter(city=>city.name.toLowerCase().startsWith(action.value.value.toLowerCase().trim()))
+               )}else{
+                   filterCity.push(...state.cities.filter(city=>city.continents.toLowerCase().startsWith(action.value.value.toLowerCase().trim()))
+                   )
+               }
             return {// se crean los datos necesarios para guardar los valores del usuario en la variable
                 ...state,
                 filterCity:filterCity
