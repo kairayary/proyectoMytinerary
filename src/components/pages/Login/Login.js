@@ -6,7 +6,7 @@ import { useStateValue } from "../../../StateProvider";
 import GoogleLogin from "react-google-login";
 import FacebookLogin from "react-facebook-login";
 import "../Login/Login.css";
-
+import swal from 'sweetalert';
 
 
 
@@ -37,9 +37,19 @@ function Login() {
     function displayMessages(data) {
       console.log(data)
       if (!data.success) {
-        console.log(alert(data.error))
+        alert(data.error)
       }
-      else { console.log(data.response) }
+      else { 
+       
+        swal({
+          title: "Welcome",
+          text: response.profileObj.name,
+          icon: "success",
+        });
+
+
+        console.log(data)
+      console.log(response) }
 
       dispatch({ //manda el dato al entorno
         type: actionType.USER,
@@ -125,9 +135,17 @@ function Login() {
     function displayMessages(data) {
       console.log(data)
       if (!data.success) {
-        console.log(alert(data.error))
+       (alert(data.error))
       }
-      else { console.log(data.response) }
+      else {swal({
+        title: "Welcome",
+        text: response.name,
+        icon: "success",
+      });
+
+
+      console.log(data)
+    console.log(response) }
 
       dispatch({ //manda el dato al entorno
         type: actionType.USER,

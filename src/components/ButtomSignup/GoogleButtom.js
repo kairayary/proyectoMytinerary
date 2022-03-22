@@ -32,10 +32,18 @@ function Google() {
                 
             //  swal(data.response.error.details.map(error => error.message), "You clicked the button!", "error");
                  alert(data.response.error.details.map(error => error.message))
-            } else if (data.success === true) {
-                // swal(data.response,"You clicked the button!", "success")
-                console.log(data)
-            }
+            
+                }  else if (data.success === true) {
+                console.log(response.profileObj.name)
+               
+               swal({
+                   
+                   title: data.response,
+                   text:response.profileObj.name,
+                   icon: "success",
+                 });
+           }
+            
 
         }
     }

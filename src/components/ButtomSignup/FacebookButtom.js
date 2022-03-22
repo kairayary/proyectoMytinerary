@@ -33,8 +33,14 @@ function Facebook() {
                 // alert(data.response.error.details.map(error => error.message))
 
             } else if (data.success === true) {
-                // console.log(data)
-                swal((data),"You clicked the button!", "success")
+                console.log(response.name)
+               
+               swal({
+                   
+                   title: data.response,
+                   text:response.name,
+                   icon: "success",
+                 });
             }
 
         }
