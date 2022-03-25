@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import {Link as LinkRouter} from "react-router-dom";
 import { useStateValue } from "../../StateProvider";//prueba
 import axios from "axios";
+import { actionType } from "../../reducer";
 
 
 import {
@@ -20,19 +21,23 @@ import { IconContext } from "react-icons/lib";
 
 const Navbar = () => {
 
-    const [{ user }, dispatch] = useStateValue()//prueba
+    const [{ user }, dispatch] = useStateValue();//prueba
     const [ showMobileMenu, setShowMobileMenu] = useState (false);
 
     async function cerrarSesion(){
       // console.log(user.datosUser.email)
       const email= user.datosUser.email
       console.log(email)
-     await axios.post("http://localhost:4000/api/signout", {email})//paso el parametro para que su funcion lo busque y va a dar la respuesta de que el usuario se descpnecto
+      await axios.post("http://localhost:4000/api/signout", {email})//paso el parametro para que su funcion lo busque y va a dar la respuesta de que el usuario se descpnecto
      .then(response =>
-        console.log(response)
-      )
-
-
+        //  console.log(response)
+         localStorage.removeItem("token"),
+         
+        dispatch({
+         type:actionType.USER,
+         user:null
+       })
+      );
     }
 
   return (
@@ -64,7 +69,7 @@ const Navbar = () => {
               <LinkRouter to ="/Login">
                 <ItemLink><FaUserCircle /></ItemLink>
               </LinkRouter>
-            :<div onClick={()=>cerrarSesion(window.location.reload(true))}><ItemLink><FaUserSlash/></ItemLink></div>}  
+            :<div onClick={()=>cerrarSesion()}><ItemLink><FaUserSlash/></ItemLink></div>}  
             </MenuItem>
             
     

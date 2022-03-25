@@ -37,10 +37,16 @@ function Login() {
     function displayMessages(data) {
       console.log(data)
       if (!data.success) {
-        alert(data.error)
-      }
-      else { 
-       
+        // alert(data.error)
+        swal({
+           title:"error",
+           icon:"error",
+           text:response.data.error,
+           
+
+        })
+      } else { 
+      
         swal({
           title: "Welcome",
           text: response.profileObj.name,
@@ -68,7 +74,8 @@ function Login() {
     }
     console.log(user)
 
-  }
+  }//aqui termina google
+
   async function loginUser(event) {
     event.preventDefault()
     const userData = {
@@ -84,16 +91,33 @@ function Login() {
         //  if (response.success === "falseVAL"){
         // console.log(response.data)
         // }
+       
         displayMessages(response.data), //para validar los datos
 
       )
 
     function displayMessages(data) {
-      console.log(data)
+      // console.log(data)
       if (!data.success) {
-        console.log(alert(data.error))
+        // alert(data.error)
+        swal({
+          title: data.error,
+         
+          icon: "error",
+        });
+
+
+        // console.log(data.error)
       }
-      else { console.log(data.response) }
+      else { 
+          console.log(data.response)
+         localStorage.setItem("token", data.response.token)
+         swal({
+          title: "welcome",
+          text: data.message,
+          icon: "success",
+        });
+      }
 
       dispatch({ //manda el dato al entorno
         type: actionType.USER,

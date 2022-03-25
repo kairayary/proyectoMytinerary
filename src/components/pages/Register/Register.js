@@ -4,7 +4,7 @@ import { Link as Linkrouter } from "react-router-dom";
 import axios from "axios";
 import Google from "../../ButtomSignup/GoogleButtom";
 import Facebook from "../../ButtomSignup/FacebookButtom";
-
+import swal from 'sweetalert';
 
 function Register() {
 
@@ -32,14 +32,29 @@ function Register() {
 
          );
       function displayMessages(data){
-         if(data.success==="falseVAL"){
+         if(data.success==="falseVal"){
            console.log(data)
-          console.log(data.response.error.details);
+           console.log(data.response.error.details);
          alert(data.response.error.details.map((error)=>error.message));
+
          }else if(data.success===true){
-           console.log(data);
-         }else if(data.success==false){
-           console.log(data);
+           console.log(data.responde);//cambie el data.success
+          //  swal({
+          //   title: "Welcome",
+          //   text: data.success,
+          //   icon: "success",
+          // });
+
+         }
+          else if(data.success==false){
+           console.log(data)
+             swal({
+             title:  data.response,
+             
+               icon: "error",
+           })
+
+
          }
 
       }

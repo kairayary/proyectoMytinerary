@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react"
 import { useStateValue } from "../../StateProvider";
 import axios from "axios";
 import "./Comments.css"
+import {FaTrashAlt} from "react-icons/fa";
+import { MdCreate } from "react-icons/md";
 import { Avatar } from "@material-ui/core"
 
 function Comment(props) {
@@ -91,8 +93,8 @@ function Comment(props) {
                     <input onKeyUp={handleChange} defaultValue={comm.comment} className="styleInput"></input>
                   </div>
                   {/* captura el comentario por cada boton q se genera se pasa el id a la funcion y la funcion pasa el parametro al controlador y este la ejecuta */}
-                  <button className="btn btn-primary mx-2" onClick={() => borrarComentario(comm._id)}>Delete</button>
-                  <button className="btn btn-primary" onClick={() => modificar(comm._id)}>Edit</button>
+                  <button className="btn btn-primary mx-2" onClick={() => borrarComentario(comm._id)}><FaTrashAlt/></button>
+                  <button className="btn btn-primary" onClick={() => modificar(comm._id)}><MdCreate/></button>
                 </div>
 
               </div>

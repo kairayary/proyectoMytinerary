@@ -26,7 +26,7 @@ async function sendEmail(email, uniqueText) {
         to: email,
         subject: "Verificacion de usuario",
         html: `<div style="margin:20px; padding:30px; background:#64b2ff; border-radius:5px solid #e07924;">
-           <h5 style="color:e07924; font-family:Oswald ; font-size: 80px; text-align: center;">The longest journey...begins with a single step</h5>
+           <p style="color:e07924; font-family:Oswald ; font-size: 80px; text-align: center;">The longest journey...begins with a single step</p>
            </br>
            </br>
            <h1 style="color:e07924; font-family:Oswald ; font-size: 80px; text-align: center;">MyTinerary</h1>
@@ -125,7 +125,7 @@ const usersControllers = {
             }
         }
 
-        catch (error) { res.json({ success: "false", response: null, error: error }) }
+        catch (error) { res.json({ success: false, response: null, error: error }) }
 
     },
     accesoUsuario: async (req, res) => {
@@ -140,31 +140,55 @@ const usersControllers = {
                     let passwordCoincide = bcryptjs.compareSync(password, usuario.password)// como guardamos encryptada utilizando el metodo compareSync la encryptamos y comoaramos con la que guardamos
                    
                     if (passwordCoincide) {// creamos un token y lo guardamos en el localstore
-                        const token = jwt.sign({ ...usuario }, process.env.SECRETKEY)
+                       
                        
                         const datosUser = {//respuesta cuando creamos un usuario
                             firstname: usuario.firstname,
                             lastname: usuario.lastname,
                             email: usuario.email,
                             id:usuario._id,// aqui me da el id de usuario para usarlo en comments
-                        }
-                        usuario.connected = true // cambiamos el estado cuando accede
-                        await usuario.save()
-                        res.json({ success: true, from: "controller", response: { token, datosUser } })
-                    } else { res.json({ success: false, from: "controller", error: "The username and/or password is incorrect" }) }
-                } else { res.json({ success: false, from: "controller", error: "Please check your email to validate it" }) }
+                        };
+                        usuario.connected = true // cambiamos el estado cuando accede (esta parte corresponde payload del token)
+                        await usuario.save();
+
+                        const token = jwt.sign({ ...datosUser }, process.env.SECRETKEY,{expiresIn:60*60*24})
+
+                        res.json({
+                             success: true,
+                             from: "controller",
+                            response: { token, datosUser},message:"Again" +" " + usuario.firstname})
+                    } else { res.json({ success: false, from: "controller", error: "The username and/or password is incorrect"})}
+                }      
+                else { res.json({ success:false, from:"controller", error:"Please check your email to validate it" }) }
             }
         }
         catch (error) { console.log(error); res.json({ success: false, response: null, error: error }) }
     },
     cerrarSesion: async (req, res) => {
         const email = req.body.email//aqui quite el closeUser
-        console.log(req.body.email)//prueba
+        // console.log(req.body.email)//prueba
         const user = await User.findOne({ email })
         user.connected = false
         await user.save()
         res.json({ success: true, response: "Closed Session" })
 
+    },
+    verificarToken: async(req,res)=>{
+        //sino hay error
+        if (!req.error) {
+           res.json({success:true,
+               respuesta:{//estos datos son los del payload
+               firstname:req.user.firstname,
+               lastname:req.user.lastname,
+               email:req.user.email,
+               id:req.user.id,
+            },
+            response:"Welcome Back " + req.user.firstname}) 
+        }else{
+            res.json({
+                success:false,response:"Please Sign In again"
+            })
+        }
     }
 }
 
