@@ -2,8 +2,8 @@
   width: 100%;
   height: 50px;
   padding-left: 1em;
-  border: solid 1px #44939b;
-  border-radius: 10px;
+  border: solid 2px #44939b;
+  border-radius: 20px;
   
 }
 .contentComment{
@@ -13,7 +13,15 @@
   width: 100%;
   height: 50px;
   padding-left: 1em;
-  border: solid 1px #44939b;
-  border-radius: 10px;
+  border: solid 2px #44939b;
+  border-radius: 20px;
   margin-bottom: 1em;
+}
+.accordion-button{
+  background-color: rgb(209, 245, 233);
+  border: solid 2px #44939b;
+  border-radius: 20px !important;
+}
+.accordion-item{
+  border-radius: 20px !important;
 }
