@@ -25,19 +25,21 @@ const Navbar = () => {
     const [ showMobileMenu, setShowMobileMenu] = useState (false);
 
     async function cerrarSesion(){
-      // console.log(user.datosUser.email)
+       console.log(user)
       const email= user.datosUser.email
       console.log(email)
       await axios.post("http://localhost:4000/api/signout", {email})//paso el parametro para que su funcion lo busque y va a dar la respuesta de que el usuario se descpnecto
-     .then(response =>
-        //  console.log(response)
-         localStorage.removeItem("token"),
-         
-        dispatch({
-         type:actionType.USER,
-         user:null
-       })
-      );
+      .then(response => {
+        console.log(response)
+        if (response.data.success) {
+            localStorage.removeItem("token")
+            dispatch({
+                type: actionType.USER,
+                user: null
+            })
+             alert(response.data.response)
+        }
+    })
     }
 
   return (

@@ -35,27 +35,35 @@ function Login() {
       )
 
     function displayMessages(data) {
-      console.log(data)
+      // console.log("estoy en boton d google")
       if (!data.success) {
         // alert(data.error)
         swal({
            title:"error",
            icon:"error",
-           text:response.data.error,
+           text:data.error,
            
-
         })
-      } else { 
-      
+      }  else { 
+        console.log(data.response)
+        localStorage.setItem("token", data.response.token)
         swal({
-          title: "Welcome",
-          text: response.profileObj.name,
-          icon: "success",
-        });
+         title: "welcome",
+         text: data.message,
+         icon: "success",
+       });
+     }
+      // else { 
+      
+      //   swal({
+      //     title: "Welcome",
+      //     text: response.profileObj.name,
+      //     icon: "success",
+      //   });
 
 
-        console.log(data)
-      console.log(response) }
+      //   console.log(data)
+      // console.log(response) }
 
       dispatch({ //manda el dato al entorno
         type: actionType.USER,
@@ -110,7 +118,7 @@ function Login() {
         // console.log(data.error)
       }
       else { 
-          console.log(data.response)
+         console.log(data.response)
          localStorage.setItem("token", data.response.token)
          swal({
           title: "welcome",
@@ -160,16 +168,26 @@ function Login() {
       console.log(data)
       if (!data.success) {
        (alert(data.error))
-      }
-      else {swal({
-        title: "Welcome",
-        text: response.name,
-        icon: "success",
-      });
+      } else { 
+        console.log(data.response)
+        localStorage.setItem("token", data.response.token)
+        swal({
+         title: "welcome",
+         text: data.message,
+         icon: "success",
+       });
+     }
 
 
-      console.log(data)
-    console.log(response) }
+    //   else {swal({
+    //     title: "Welcome",
+    //     text: response.name,
+    //     icon: "success",
+    //   });
+
+
+    //   console.log(data)
+    // console.log(response) }
 
       dispatch({ //manda el dato al entorno
         type: actionType.USER,
