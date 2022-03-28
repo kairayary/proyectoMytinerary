@@ -11,10 +11,10 @@ module.exports = passport.use(new jwtStrategy({
     secretOrKey: process.env.SECRETKEY//SECRETKEY es el parámetro de encryptado del token
     //de la extración del jwt solo tomamos el payload
 }, (jwt_payload, done) => {//una vez q haga la extracción la compare con la clave secreta haga un función anónima y tiene como parámetrp el paiload y la función de retorno done
-    // console.log(jwt_payload)
+     console.log(jwt_payload)
     User.findOne({_id:jwt_payload.id})
     .then(user=>{
-        console.log(user)
+        // console.log(user)
         if (user) {
             return done(null,user)//el null si no hay un error, sino devuelve la respuesta de la linea 15 
         }else if(error){
