@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'); */
 
 body{
  box-sizing: border-box;
@@ -12,10 +12,10 @@ main{
   overflow: hidden;
   font-size: 30px;
   text-align: center;
-  font-family: 'Playfair Display', serif;
-  color: #d2691e;
-  text-shadow: 0 0 2px rgb(12, 12, 12);
+  font-family: 'Dancing Script', cursive;
+ 
 }
+
 
 *{
   box-sizing: border-box;

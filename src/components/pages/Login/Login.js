@@ -48,7 +48,7 @@ function Login() {
         console.log(data.response)
         localStorage.setItem("token", data.response.token)
         swal({
-         title: "welcome",
+         title: "Welcome",
          text: data.message,
          icon: "success",
        });
@@ -92,8 +92,6 @@ function Login() {
       password: event.target[1].value,
     }
 
-
-
     await axios.post("http://localhost:4000/api/signin", { userData })
       .then(response =>  //alert(response.data.response))
         //  if (response.success === "falseVAL"){
@@ -115,13 +113,13 @@ function Login() {
         });
 
 
-        // console.log(data.error)
+        console.log(data.error)
       }
       else { 
          console.log(data.response)
          localStorage.setItem("token", data.response.token)
          swal({
-          title: "welcome",
+          title: "Welcome",
           text: data.message,
           icon: "success",
         });
@@ -172,7 +170,7 @@ function Login() {
         console.log(data.response)
         localStorage.setItem("token", data.response.token)
         swal({
-         title: "welcome",
+         title: "Welcome",
          text: data.message,
          icon: "success",
        });

@@ -16,15 +16,18 @@ const cities = props.data
   return (
   
     <div className="containercities">
+      <h1>The Best Cities in the World !!!</h1>
       <main>
-        <h1>THE BEST CITIES IN THE WORLD !!!</h1>
+        
          <Slideshow /> 
       </main>
       <div>
+      <div className="styleSearch">
         <Search />
       </div>
       <div className="textocities">
-          <h2>FIND THE BEST DESTINATIONS </h2>
+          <h2>Find the Best Destinations</h2>
+        </div>
         </div>
       <div className="wrapper">
         

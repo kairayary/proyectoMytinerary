@@ -14,6 +14,7 @@ function Search() {
   const handleChange =(event)=>{
     setChecked(event.target.checked);
     event.target.checked ? setFiltro(" Select the City"): setFiltro("Select the Continent")
+    console.log(event.target)
   }
 
   const [{ cities }, dispatch] = useStateValue()
@@ -21,7 +22,7 @@ function Search() {
   
   
   const searchInput = (event) => {
-
+    
     dispatch({
       type: actionType.FILTER,
       // value: event.target.value
@@ -58,9 +59,9 @@ function Search() {
             <div class="search_box">
               {/* <input type="text" className="input" placeholder="Search..." /> */}
               <input type="text" onChange={searchInput} className="input" placeholder="Search..." />
-              <div class="btn btn_common">
+              {/* <div class="btn btn_common">
                 <i class="fas fa-search"></i>
-              </div>
+              </div> */}
             </div>
           </form>
         </div>

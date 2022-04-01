@@ -1,16 +1,48 @@
 .containercities{
     background: rgb(235,200,237);
-background: linear-gradient(41deg, rgba(235,200,237,1) 29%, rgba(171,237,215,1) 57%, rgba(240,194,114,1) 90%);
- 
+    background: linear-gradient(41deg, rgba(235,200,237,1) 29%, rgba(171,237,215,1) 57%, rgba(240,194,114,1) 90%);
+
     width: 100%;
     height: 100%;
 }
-.textocities{
-    margin-top: 5px;
-    font-size: 30px ;
+.containercities h1{
+    
+    font-size: 60px; ;
     left: 90px;
     text-align: center;
-    font-family:   'Playfair Display', serif!important;
+    font-family: 'Dancing Script', cursive;
     color: #d2691e;
-    text-shadow: 0 0 2px rgb(12, 12, 12);
+    text-shadow: 0 0 2px rgb(245, 241, 7);
+}
+/* .styleSearch{
+    width: 100%;
+    height: 500px;
+    object-fit: none;
+    background: url(../Imagen/ruta1.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 80%;
+} */
+.textocities{
+    width: 100%;
+    height: 350px;
+    object-fit: none;
+    background: url(../Imagen/ruta2.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 80%;
+   
+}
+.textocities h2{
+    font-size: 80px;
+    /* margin-left: 90px; */
+    position:absolute ;
+    text-align: center;
+    margin-top: 80px;
+    padding-top: 60px;
+    font-family: 'Dancing Script', cursive;
+    color: #d2691e;
+    text-shadow: 0 0 2px rgb(245, 241, 7);
+    font-weight: 300;
+    
 }

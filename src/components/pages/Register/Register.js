@@ -39,11 +39,11 @@ function Register() {
 
          }else if(data.success===true){
            console.log(data.responde);//cambie el data.success
-          //  swal({
-          //   title: "Welcome",
-          //   text: data.success,
-          //   icon: "success",
-          // });
+           swal({
+            title: "Welcome",
+            text: data.success,
+            icon: "success",
+          });
 
          }
           else if(data.success==false){

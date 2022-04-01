@@ -1,4 +1,5 @@
 import React from "react";
+import {Link as LinkRouter} from "react-router-dom";
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
 import {
   FooterContainer,
@@ -31,8 +32,12 @@ function Footer() {
         <FooterLinksWrapper>
           <FooterLinksItems>
             <FooterLinkTitle>About Us</FooterLinkTitle>
-            <FooterLink to="/">How it works</FooterLink>
-            <FooterLink to="/">Testimonials</FooterLink>
+            <LinkRouter to="/">
+            <FooterLink >HOME</FooterLink>
+            </LinkRouter>
+            <LinkRouter to="/Cities">
+            <FooterLink >CITIES</FooterLink>
+            </LinkRouter>
           </FooterLinksItems>
           <FooterLinksItems>
             <FooterLinkTitle>Contact Us</FooterLinkTitle>

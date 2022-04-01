@@ -1,0 +1,10 @@
+.StyleButtom{
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: #e78609;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+}

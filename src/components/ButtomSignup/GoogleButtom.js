@@ -2,6 +2,7 @@ import React from "react";
 import GoogleLogin from "react-google-login";
 import axios from "axios";
 import swal from 'sweetalert';
+import "./ButtonSign.css";
 
 function Google() {
 
@@ -53,13 +54,19 @@ function Google() {
     return(
 
         <div className='facebook mt-5'>
-        <GoogleLogin
-        clientId="971845975096-d96pfrveho1431brgjcu4m4a2leibuei.apps.googleusercontent.com"
-        buttonText="LOGIN WITH GOOGLE"
-        onSuccess={responseGoogle}
-        onFailure={responseGoogle}
-        cookiePolicy={'single_host_origin'}
-      />
+        
+
+    <GoogleLogin
+
+    clientId="971845975096-d96pfrveho1431brgjcu4m4a2leibuei.apps.googleusercontent.com"
+    render={renderProps => (
+      <button onClick={renderProps.onClick} className= "StyleButtom">LOGIN WITH GOOGLE</button>
+    )}
+    buttonText="Login"
+    onSuccess={responseGoogle}
+    onFailure={responseGoogle}
+    cookiePolicy={'single_host_origin'}
+   />
       </div>
     )
 

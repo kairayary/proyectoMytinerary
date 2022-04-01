@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 
 export const FooterContainer = styled.div`
- background-color: #ba9dcc;
+ background-color:#e37b5b;
  display: flex;
  flex-direction: row;
  justify-content: center;

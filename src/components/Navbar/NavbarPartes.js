@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
  width: 100%;
  height: 58px;
- background-color: #ba9dcc;
+ background-color:#e37b5b;
  
 
 `;
@@ -23,7 +23,7 @@ export const LogoNavbar = styled.div`
  display: flex;
  align-items: center;
  font-size: 1.2rem;
- fontfamily: 'Dancing Script', cursive !import;
+ fontfamily: 'Inspiration', cursive !import;
 
  svg {
      fill: #d2691e;
