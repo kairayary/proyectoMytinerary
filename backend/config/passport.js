@@ -17,10 +17,10 @@ module.exports = passport.use(new jwtStrategy({
         // console.log(user)
         if (user) {
             return done(null,user)//el null si no hay un error, sino devuelve la respuesta de la linea 15 
-        }else if(error){
-            return done(error,false)
+        // }else if(error){
+        //     return done(error,false)
         }else{
-            return done(null,false)
+            return done(error,false)//estaba null,false
         }
     }).catch(error=>{return done(error,false)})
 }))

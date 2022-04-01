@@ -24,7 +24,7 @@ function Comment(props) {
 
       itinerario: props.itinerario,//props.itinerario viene des itineraries.js
       mensaje: event.target[0].value,
-      user: user.datosUser.id //para traer los datos de usuario, tiene el nombre como lo puse en reducer
+      user: user.id //para traer los datos de usuario, tiene el nombre como lo puse en reducer
 
 
     }
@@ -68,6 +68,8 @@ function Comment(props) {
     setReload(!reload)
 
   }
+  console.log(comment)
+  console.log(user)
 
   return (
     <>

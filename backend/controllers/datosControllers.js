@@ -24,29 +24,61 @@ const datosController = {
     })
   },
 
-   ObtenerItinerarios:async(req,res) => {
-     console.log(req.params)
-     let itinerary;
+  ObtenerItinerarios: async (req, res) => {
+    console.log(req.params)
+    let itinerary;
 
-     const city = req.params.city
-     let error = null
-     try {
-       itinerary = await Itinerary.find({city:city})
+    const city = req.params.city
+    let error = null
+    try {
+      itinerary = await Itinerary.find({ city: city })
       //  console.log(itinerary)
-  
-     } catch (err){
-       error = err
-       console.log(error)
-     }
-     res.json({
-       response:error?"ERROR":{itinerary},
-       success:error?false:true,
-      error:error
-     })
-   }
-  
+
+    } catch (err) {
+      error = err
+      console.log(error)
+    }
+    res.json({
+      response: error ? "ERROR" : { itinerary },
+      success: error ? false : true,
+      error: error
+    })
+  },
+
+  likeDislike: async (req, res) => {
+    const id = req.params.id;
+    const user= req.user.id
+
+    console.log(id)
+    console.log(user)
+    let itinerary
+
+    try {//aqui buscamos el itinerario
+      itinerary = await Itinerary.findOne({ _id: id })
+     
+      //si include, vemos si el id esta y si lo encuentra al hacer click hace un dislike
+      if (itinerary.likes.includes(user)) {
+                                            //metodos para modificar bases de datos(pull:elimina)
+        Itinerary.findOneAndUpdate({_id:id},{$pull:{likes:user}},{new:true})
+        .then(response=>res.json({success:true,response:response.likes}))
+        .catch(error=>console.log(error))
+      }else{
+                                            //push:agrega o empuja
+        Itinerary.findOneAndUpdate({_id:id},{$push:{likes:user}},{new:true})
+        .then(response=>res.json({success:true,response:response.likes}))
+        .catch(error=>console.log(error))
+      }
+     
+
+    } catch (err) {
+      error = err
+     res.json({success:false,response:error})
+    }
+   
+  },
+
 }
 
 
 
-  module.exports = datosController
+module.exports = datosController

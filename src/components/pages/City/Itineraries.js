@@ -10,7 +10,7 @@ function Itineraries(props) {
 
     const itinerarios = props.itineraries
 
-
+  console.log(itinerarios)
     return (
         <>
 
@@ -73,8 +73,8 @@ function Itineraries(props) {
                             </div>
                         </div>
                         <div className="styleiLike">
-                           <Likes/>
-                        </div>
+                           <Likes likes={itin.likes} id={itin._id}/>
+                        </div> 
                         <div className="styleComments">
                             <Comment itinerario={itin._id} />
                         </div>

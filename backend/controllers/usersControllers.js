@@ -151,12 +151,11 @@ const usersControllers = {
                         usuario.connected = true // cambiamos el estado cuando accede (esta parte corresponde payload del token)
                         await usuario.save();
 
-                        const token = jwt.sign({ ...datosUser }, process.env.SECRETKEY,{expiresIn:60*60*24})
-
+                        const token = jwt.sign({ ...datosUser }, process.env.SECRETKEY,{expiresIn:60*60*24});
                         res.json({
                             success: true,
                              from: "controller",
-                            response: { token, datosUser},message:"Again" +" " + usuario.firstname})
+                            response: { token, ...datosUser},message:"Again" +" " + usuario.firstname})
                     } else { res.json({ success: false, from: "controller", error: "The username and/or password is incorrect"})}
                 }      
                 else { res.json({ success:false, from:"controller", error:"Please check your email to validate it" }) }
@@ -184,6 +183,7 @@ const usersControllers = {
                id:req.user.id,
             },
             response:"Welcome Back " + req.user.firstname}) 
+            
         }else{
             res.json({
              success:false,response:"Please Sign In again"
