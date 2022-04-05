@@ -29,13 +29,13 @@
 .registerForm> label{
     margin: 10px 0;
 }
-.registerInput{
+.regiterInput{
     padding: 10px;
     background-color: white;
     border: none;
     border-radius: 10px;
 }
-.registerInput:focus {
+.regiterInput:focus {
     outline: none;
   }
 .registerButton{

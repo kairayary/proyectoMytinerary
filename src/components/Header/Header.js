@@ -9,7 +9,8 @@ import Polinesia from "../Imagen/Polinesia.Oceania.jpg";
 import SaoPaulo from "../Imagen/SaoPaulo.jpeg";
 import { AiTwotoneLike } from "react-icons/ai";
 import { FaRegComment } from "react-icons/fa";
-import Gifsciudades from "../Imagen/Gifsciudades.gif";
+import gifscamara from "../Imagen/gifscamara.gif"
+import { borderRadius } from "@mui/system";
 
 function Header() {
   return (
@@ -24,17 +25,14 @@ function Header() {
         </div>
         <div className="headerImg">
           <div className="headerImgStyle">
-             <img src={viajar} width="100%" height="500" alt="" />   
-           
+            <img src={viajar} width="100%" height="500" alt="" />
+
           </div>
           <div className="headerComment">
-          <div className="headerTexto">
-            <p> MyTinerary takes you to magical places, to discover mesmerizing and natural settings in the corner of the planet
-              of your choice.</p>
-          </div>
-          <div className="headerCommentImg">
-              {/* <img src={Gifsciudades} width="90%" height="480" alt="" /> */}
-          </div>
+            
+            <div className="headerCommentImg">
+              {/* <img src={} width="90%" height="480" alt="" /> */}
+            </div>
           </div>
           <div className="headerFrase">
             <div className="headerFrase1">
@@ -42,6 +40,15 @@ function Header() {
             </div>
             <div className="imgFrase1"></div>
           </div>
+          <div className="headerTexto">
+              <div>
+                <p> MyTinerary takes you to magical places, to discover mesmerizing and natural settings in the corner of the planet
+                  of your choice.</p>
+              </div>
+              <div className="headerTextoImg">
+                <img src={gifscamara} width="80%" height="280"  alt="" /> 
+              </div>
+            </div>
           <div className="headerTitleM">
             <p>Discover the places most recommended by our users...</p>
           </div>

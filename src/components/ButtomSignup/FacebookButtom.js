@@ -1,13 +1,15 @@
 import React from "react";
-import FacebookLogin from "react-facebook-login";
+// import FacebookLogin from "react-facebook-login";
 import axios from "axios";
 import swal from 'sweetalert';
-
+import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'
+import "./ButtonSign.css";
+import { FaFacebookSquare} from "react-icons/fa";
 
 function Facebook() {
 
     const responseFacebook = async (response) => {
-       console.log(response)
+        console.log(response)
         const NuevoUsuario = {
             firstname: response.name,
             lastname: "facebook",
@@ -17,7 +19,7 @@ function Facebook() {
         }
 
 
-        await axios.post("http://localhost:4000/api/signup",{NuevoUsuario })
+        await axios.post("http://localhost:4000/api/signup", { NuevoUsuario })
             .then(response => //alert(response.data.response))
                 //  if (response.success === "falseVAL"){
                 // console.log(response.data)
@@ -34,25 +36,39 @@ function Facebook() {
 
             } else if (data.success === true) {
                 console.log(response.name)
-               
-               swal({
-                   
-                   title: data.response,
-                   text:response.name,
-                   icon: "success",
-                 });
+
+                swal({
+
+                    title: data.response,
+                    text: response.name,
+                    icon: "success",
+                });
             }
 
         }
     }
 
     return (
-        <div className='facebook mt-5'>
+        <div className='facebook mt-4'>
+            {/* <FacebookLogin
+                appId="244949647757742"
+                autoLoad={false}
+                fields="name,email,picture"
+                callback={responseFacebook} /> */}
+
             <FacebookLogin
                 appId="244949647757742"
                 autoLoad={false}
                 fields="name,email,picture"
-                callback={responseFacebook} />
+                callback={responseFacebook}
+                render={renderProps => (
+                    <button onClick={renderProps.onClick}className= "StyleButtom" ><FaFacebookSquare/>Login with FACEBOOK</button>
+                )}
+            />
+
+
+
+
         </div>
     );
 

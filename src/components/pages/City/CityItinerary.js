@@ -7,24 +7,28 @@ import viaje3 from "../../Imagen/viaje3.jpg";
 
 
 
-function CityItinerary(props) { 
+function CityItinerary(props) {
 
-const city = props.citySelecter
+    const city = props.citySelecter
     return (
         <>
             <div class="heading">
-                {city.map(data => ( 
+                {city.map(data => (
                     <div className="headingItem">
 
                         <div className="heading-Items">
-                            <img src={process.env.PUBLIC_URL + `/Imagenes/Flags/${data.flag}`}/>
+                            <img src={process.env.PUBLIC_URL + `/Imagenes/Flags/${data.flag}`} />
 
                         </div>
 
-                        <div className="heading-Items">
+                        <div className="haedingTitle">
+                            <h1>Itineraries</h1>
+                        </div>
+
+                        {/* <div className="heading-Items">
                             <img src={process.env.PUBLIC_URL + `/Imagenes/Flags/${data.flag}`}/>
 
-                        </div>
+                        </div> */}
 
                         <div className="heading-Items">
                             <img src={process.env.PUBLIC_URL + `/Imagenes/Flags/${data.flag}`} />
@@ -32,19 +36,17 @@ const city = props.citySelecter
                         </div>
 
                     </div>
-                 ))}
-                <div className="haedingTitle">
-                    <h1>ITINERARIES</h1>
-                </div>
+                ))}
+
 
             </div>
             <div className="headingText">
                 <h4>"There are too many adventures out there waiting to be lived"</h4>
 
-                <span>Select the options and find the perfect itineraries for you... THE ADVENTURE BEGINS!</span>
+                <span>Select the options and find the perfect itineraries for you... The Adventure Begins!!!</span>
             </div>
 
-           
+
         </>
     );
 

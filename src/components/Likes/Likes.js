@@ -1,6 +1,6 @@
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
-import { FcLike } from "react-icons/fc";
+import { FcLike,FcDislike } from "react-icons/fc";
 import React, { useState } from 'react';
 import { useStateValue } from "../../StateProvider";
 import axios from 'axios';
@@ -25,7 +25,7 @@ function Likes(props) {//estas props las traigo de itineraries que tengo el lamd
             setLike(response.data.response)
             )
     }
-    const Ilike = like?.includes(user?.id)?<FcLike/>:"Dislike"
+    const Ilike = like?.includes(user?.id)?<FcLike/>:<FcDislike/>
     return (
         <>
             <div className='contentLikes'>
@@ -33,7 +33,7 @@ function Likes(props) {//estas props las traigo de itineraries que tengo el lamd
                     <img></img>
                     <p className='usuario'>User</p>
                 </div>
-
+               {user?
                 <div className="iLike">
                     <Button variant="outlined" onClick={likeDislike} color="primary" size="large">
                         {Ilike}
@@ -41,6 +41,15 @@ function Likes(props) {//estas props las traigo de itineraries que tengo el lamd
                     {/* <button type="button" className="btn btn-outline-info"><FcLike /></button> */}
                     <span>{like?.length}</span>
                 </div>
+                :
+                <div className="iLike">
+                    <div variant="outlined" onClick={likeDislike} color="primary" size="large">
+                        {Ilike}
+                    </div>
+                    <span>{like?.length}</span>
+                </div>
+
+                }
             </div>
         </>
 

@@ -1,5 +1,7 @@
 import React from "react";
 import GoogleLogin from "react-google-login";
+import Button from '@mui/material/Button';
+import {FcGoogle } from "react-icons/fc";
 import axios from "axios";
 import swal from 'sweetalert';
 import "./ButtonSign.css";
@@ -53,14 +55,14 @@ function Google() {
     
     return(
 
-        <div className='facebook mt-5'>
+        <div className='google mt-3'>
         
 
     <GoogleLogin
 
     clientId="971845975096-d96pfrveho1431brgjcu4m4a2leibuei.apps.googleusercontent.com"
     render={renderProps => (
-      <button onClick={renderProps.onClick} className= "StyleButtom">LOGIN WITH GOOGLE</button>
+      <button onClick={renderProps.onClick} className= "StyleButtom"><FcGoogle/>  Login with GOOGLE</button>
     )}
     buttonText="Login"
     onSuccess={responseGoogle}

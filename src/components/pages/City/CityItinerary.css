@@ -27,17 +27,36 @@ border-radius: 50%;
  
 }
 
-.haedingTitle{
+.haedingTitle h1{
 
 display: flex;
+margin-top: 70px;
 align-items: center;
+font-family: 'Dancing Script', cursive;
+    color: #d2691e;
+    text-shadow: 0 0 2px rgb(245, 241, 7);
+    font-size: 100px;
+    font-weight: 700;
 }
 
-.headingText{
+.headingText h4{
+  font-family: 'Dancing Script', cursive;
   margin-top: 15px;
-  font-size: 30px ;
+  font-size: 40px ;
   left: 90px;
-  color: #23394d;
+  color: #d2691e;
   text-align: center;
+  font-weight: 400;
   text-shadow: 0 0 5px whitesmoke;
 }
+ .headingText span{
+    font-size: 40px;
+    margin-left: 90px;
+    position:absolute ;
+    /* margin-top: 15px; */
+    /* padding-top: 60px;  */
+    font-family: 'Dancing Script', cursive;
+    color: #d2691e;
+    text-shadow: 0 0 2px rgb(245, 241, 7);
+    font-weight: 300;
+} 

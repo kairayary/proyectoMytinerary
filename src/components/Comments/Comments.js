@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react"
 import { useStateValue } from "../../StateProvider";
 import axios from "axios";
 import "./Comments.css"
-import {FaTrashAlt} from "react-icons/fa";
+import { FaTrashAlt } from "react-icons/fa";
 import { MdCreate } from "react-icons/md";
 import { Avatar } from "@material-ui/core"
+import swal from 'sweetalert';
 
 function Comment(props) {
 
@@ -44,13 +45,20 @@ function Comment(props) {
         setComment(response.data.response.comentario)
 
       })
-    console.log(comment)
+    // console.log(comment)
   }, [reload])
 
 
-  const borrarComentario = (id) => {
+  const borrarComentario = async (id) => {
 
-    axios.delete(`http://localhost:4000/api/comments/${id}`)
+    await axios.delete(`http://localhost:4000/api/comments/${id}`)
+      .then(response => {
+        swal({
+          text: response.data.message,
+          buttons: "ok",
+        })
+
+      })
     setReload(!reload)
 
   }
@@ -58,13 +66,20 @@ function Comment(props) {
     setCambio(event.target.value)
 
   }
-  const modificar = (id) => {//en el controllers se hizo modificarComentario
+  const modificar = async (id) => {//en el controllers se hizo modificarComentario
 
     console.log(id)
     console.log(cambio)
     let data = cambio
-    axios.put(`http://localhost:4000/api/comments/${id}`, { data })
-      .then(response => { console.log(response) })
+    await axios.put(`http://localhost:4000/api/comments/${id}`, { data })
+      .then(response => {
+        // console.log(response) 
+        swal({
+          text: response.data.message,
+          buttons: "ok",
+
+        })
+      })
     setReload(!reload)
 
   }
@@ -90,17 +105,30 @@ function Comment(props) {
                     <img></img>
                     <p>{comm.user.firstname}</p>
                   </div>
-                  <div className="commentText">
+                  {user?.id===comm.user._id?
+                    <div>
+                      <div className="commentText">
+                        {/* event entra como parámetro del onChange y pasa como parámetro a la función y pasa hacia arriba */}
+                        <input onKeyUp={handleChange} defaultValue={comm.comment} className="styleInput"></input>
+                      </div>
+                      <div className="btnComment">
+                        {/* captura el comentario por cada boton q se genera se pasa el id a la funcion y la funcion pasa el parametro al controlador y este la ejecuta */}
+                        <button className="btn btn-primary mx-2" onClick={() => borrarComentario(comm._id)}><FaTrashAlt /></button>
+                        <button className="btn btn-primary" onClick={() => modificar(comm._id)}><MdCreate /></button>
+                      </div>
+                    </div>:
+                    <div className="commentText">
                     {/* event entra como parámetro del onChange y pasa como parámetro a la función y pasa hacia arriba */}
-                    <input onKeyUp={handleChange} defaultValue={comm.comment} className="styleInput"></input>
+                    <div className="styleInput">{comm.comment}</div>
                   </div>
-                  {/* captura el comentario por cada boton q se genera se pasa el id a la funcion y la funcion pasa el parametro al controlador y este la ejecuta */}
-                  <button className="btn btn-primary mx-2" onClick={() => borrarComentario(comm._id)}><FaTrashAlt/></button>
-                  <button className="btn btn-primary" onClick={() => modificar(comm._id)}><MdCreate/></button>
+                  }
                 </div>
+
 
               </div>
             )}
+            {user?
+            <div>
             <form onSubmit={submitComment} className="p-3">
               <textarea name="textarea" placeholder="Write us..." className="itineraryTextarea">
 
@@ -109,6 +137,10 @@ function Comment(props) {
                 <button type="submit" className="btn btn-primary">Send</button>
               </div>
             </form>
+            </div>
+            :
+            <h6 className="p-3">You must login to comment</h6>
+            }
           </div>
         </div>
       </div>

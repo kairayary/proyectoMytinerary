@@ -59,7 +59,7 @@ export const FooterLinkTitle = styled.h3`
 `;
 
  export const FooterLink = styled.div`
- color: #d2691e;
+ color:  #23394d;
  text-decoration: none;
  margin-bottom: 0.5rem;
 
@@ -82,14 +82,14 @@ export const FooterLinkTitle = styled.h3`
  width: 90%;
  max-width: 1000px;
  margin: 10px auto 0 auto;
-
+ font-family: 'Dancing Script', cursive!important
  @media screen and (max-width: 820px){
      flex-direction: column;
  }
  `;
 
  export const SocialLogo = styled.div`
- color: #d2691e;
+ color:  #23394d;
  justify-self: start;
  cursor: pointer;
  text-decoration: none;
@@ -109,7 +109,7 @@ export const FooterLinkTitle = styled.h3`
  `;
 
  export const SocialIconLink = styled.div`
- color: #d2691e;
+ color:  #23394d;
  font-size: 24px;
  display: flex;
  justify-content: space-between;
