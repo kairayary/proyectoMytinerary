@@ -29,10 +29,10 @@ function Likes(props) {//estas props las traigo de itineraries que tengo el lamd
     return (
         <>
             <div className='contentLikes'>
-                <div className='imgAvatar'>
+                {/* <div className='imgAvatar'>
                     <img></img>
                     <p className='usuario'>User</p>
-                </div>
+                </div> */}
                {user?
                 <div className="iLike">
                     <Button variant="outlined" onClick={likeDislike} color="primary" size="large">

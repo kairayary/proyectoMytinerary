@@ -35,13 +35,13 @@ function Register() {
          if(data.success==="falseVal"){
            console.log(data)
            console.log(data.response.error.details);
-         alert(data.response.error.details.map((error)=>error.message));
+           alert(data.response.error.details.map((error)=>error.message));
 
          }else if(data.success===true){
            console.log(data.succes);//cambie el data.success
            swal({
             title: "Welcome",
-            text: data.success,
+            text: data.response,
             icon: "success",
           });
 
@@ -88,12 +88,7 @@ function Register() {
               type="password"
               placeholder="Enter your password..."
             />
-            {/* <label> Confirm your Password</label>
-            <input
-              className="registerInput"
-              type="password"
-              placeholder="Enter your password..."
-            /> */}
+            
             <button type="submit" className="registerButton">Register</button>
           </form>
           <Linkrouter to="/login">

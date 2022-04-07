@@ -13,7 +13,8 @@ main{
   font-size: 30px;
   text-align: center;
   font-family: 'Dancing Script', cursive;
- 
+  border-radius: 20px;
+  box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
 }
 
 

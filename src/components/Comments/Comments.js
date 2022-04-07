@@ -118,7 +118,7 @@ function Comment(props) {
                       </div>
                     </div>:
                     <div className="commentText">
-                    {/* event entra como parámetro del onChange y pasa como parámetro a la función y pasa hacia arriba */}
+                   
                     <div className="styleInput">{comm.comment}</div>
                   </div>
                   }

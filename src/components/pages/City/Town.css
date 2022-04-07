@@ -30,6 +30,11 @@
     
 
 }
+.townImg img{
+    margin-top: 1.5em;
+    box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff;
+    border-radius: 5%;
+}
 
 .townItems{
     display: flex;

@@ -4,6 +4,7 @@ import "../City/CityItinerary.css";
 import viajar from "../../Imagen/viajar.jpeg";
 import viaje1 from "../../Imagen/viaje1.jpg";
 import viaje3 from "../../Imagen/viaje3.jpg";
+import MundoN from "../../Imagen/MundoN.gif";
 
 
 
@@ -16,23 +17,30 @@ function CityItinerary(props) {
                 {city.map(data => (
                     <div className="headingItem">
 
-                        <div className="heading-Items">
-                            <img src={process.env.PUBLIC_URL + `/Imagenes/Flags/${data.flag}`} />
+                        <div className=" headingItem1">
+                            <div className="heading-Items">
+                                <img src={process.env.PUBLIC_URL + `/Imagenes/Flags/${data.flag}`} />
 
-                        </div>
+                            </div>
 
-                        <div className="haedingTitle">
-                            <h1>Itineraries</h1>
-                        </div>
+                            <div className="heading-Items">
+                                <h1>Itineraries</h1>
+                            </div>
 
-                        {/* <div className="heading-Items">
+                            {/* <div className="heading-Items">
                             <img src={process.env.PUBLIC_URL + `/Imagenes/Flags/${data.flag}`}/>
 
+                             </div> */}
+
+                            <div className="heading-Items">
+                                <img src={process.env.PUBLIC_URL + `/Imagenes/Flags/${data.flag}`} />
+                            </div>
+                        </div>
+                        {/* <div className="haedingTitle">
+                            <img src={mundo}  alt="" />
                         </div> */}
-
-                        <div className="heading-Items">
-                            <img src={process.env.PUBLIC_URL + `/Imagenes/Flags/${data.flag}`} />
-
+                        <div className="haedingTitle">
+                            <img src={MundoN}  alt="" />
                         </div>
 
                     </div>

@@ -4,11 +4,12 @@ import { Link as Linkrouter } from "react-router-dom";
 import { actionType } from "../../../reducer";
 import { useStateValue } from "../../../StateProvider";
 import GoogleLogin from "react-google-login";
-import FacebookLogin from "react-facebook-login";
 import "../Login/Login.css";
 import swal from 'sweetalert';
-
-
+import {FcGoogle } from "react-icons/fc";
+import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props';
+// import "./ButtonSign.css";
+import {FaFacebookSquare} from "react-icons/fa";
 
 
 function Login() {
@@ -228,24 +229,35 @@ function Login() {
           <button type="submit" className="loginRegisterButton">Register</button>
         </Linkrouter>
 
-        <div className='Google mt-4'>
-          <GoogleLogin
-            clientId="971845975096-d96pfrveho1431brgjcu4m4a2leibuei.apps.googleusercontent.com"
-            buttonText="LOGIN WITH GOOGLE"
-            onSuccess={responseGoogle}
-            onFailure={responseGoogle}
-            cookiePolicy={'single_host_origin'}
-          />
-        </div>
-
+        
+        <div className='google mt-3'>
+        
+        <GoogleLogin
+    
+        clientId="971845975096-d96pfrveho1431brgjcu4m4a2leibuei.apps.googleusercontent.com"
+        render={renderProps => (
+          <button onClick={renderProps.onClick} className= "StyleButtom"><FcGoogle/>  Login with GOOGLE</button>
+        )}
+        buttonText="Login"
+        onSuccess={responseGoogle}
+        onFailure={responseGoogle}
+        cookiePolicy={'single_host_origin'}
+       />
+          </div>
+          
+       
         <div className='facebook mt-4'>
+          
           <FacebookLogin
-            appId="244949647757742"
-            autoLoad={false}
-            fields="name,email,picture"
-            callback={responseFacebook} />
-        </div>
-
+              appId="244949647757742"
+              autoLoad={false}
+              fields="name,email,picture"
+              callback={responseFacebook}
+              render={renderProps => (
+                  <button onClick={renderProps.onClick}className= "StyleButtom" ><FaFacebookSquare/>Login with FACEBOOK</button>
+              )}
+          />
+      </div>
         
       </div>
     </div>

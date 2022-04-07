@@ -50,12 +50,7 @@ function Facebook() {
 
     return (
         <div className='facebook mt-4'>
-            {/* <FacebookLogin
-                appId="244949647757742"
-                autoLoad={false}
-                fields="name,email,picture"
-                callback={responseFacebook} /> */}
-
+          
             <FacebookLogin
                 appId="244949647757742"
                 autoLoad={false}
@@ -65,10 +60,6 @@ function Facebook() {
                     <button onClick={renderProps.onClick}className= "StyleButtom" ><FaFacebookSquare/>Login with FACEBOOK</button>
                 )}
             />
-
-
-
-
         </div>
     );
 

@@ -1,9 +1,9 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap"); */
+
 
 
 
 body {
-  /* font-family: "Noto Sans", sans-serif; */
+ 
   color: #23394d;
   
 }
@@ -18,7 +18,8 @@ body {
 }
 
 .post{
-  box-shadow: 0 0 10px 5px; 
+  box-shadow: 10px 10px 20px #e1e1e3, -15px -15px 27px #ffffff;
+  /* box-shadow: 0 0 10px 5px;  */
   min-width: 28rem;
   display: flex;
   border-radius: 1rem;
@@ -43,40 +44,6 @@ body {
     line-height: 1.2rem;
   }
  
-/*.post__likes {
-  border: none;
-  border-top: 1px solid;
-  background-color: transparent;
-  font-family: inherit;
-  font-size: 1rem;
-  font-weight: bold;
-  color: inherit;
-  width: 100%;
-  padding-top: 1rem;
-  margin-top: 1rem;
-  cursor: pointer;
-  transition: 200ms ease-in, color 200ms ease-in;
-
-} 
-  
-.post__comment {
-  border: none;
-    border-top: 1px solid;
-    background-color: transparent;
-    font-family: inherit;
-    font-size: 1rem;
-    font-weight: bold;
-    color: inherit;
-    width: 100%;
-    padding-top: 1rem;
-    margin-top: 1rem;
-    cursor: pointer;
-    transition: 200ms ease-in, color 200ms ease-in;
-     
-}*/
-    
-
-
 .post__btn {
     border: none;
     border-top: 1px solid;
@@ -100,7 +67,8 @@ body {
  
 .post:hover {
   transform: scale(1.15);
-  box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+   box-shadow: 5px 5px 15px rgba(0,0,0,0.6); 
+  /* box-shadow: 15px 15px 27px #e1e1e3, -15px -15px 27px #ffffff; */
   border-radius: 1rem;
 } 
   
