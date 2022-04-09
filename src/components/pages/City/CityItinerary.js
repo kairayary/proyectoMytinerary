@@ -1,9 +1,6 @@
 import React from "react";
 import { useStateValue } from "../../../StateProvider";
 import "../City/CityItinerary.css";
-import viajar from "../../Imagen/viajar.jpeg";
-import viaje1 from "../../Imagen/viaje1.jpg";
-import viaje3 from "../../Imagen/viaje3.jpg";
 import MundoN from "../../Imagen/MundoN.gif";
 
 

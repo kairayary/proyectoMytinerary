@@ -36,17 +36,17 @@ function Town(props) {
         <div className="townItems">
 
           <div className="items">
-            <img src={IconoContinente} width="40px" height="40px" />
+            <img src={IconoContinente} width="70px" height="70px" />
             <p>{data.continents}</p>
           </div>
 
           <div className="items">
-            <img src={IconoLengua} width="50px" height="50px" />
+            <img src={IconoLengua} width="70px" height="70px" />
             <p>{data.language}</p>
           </div>
 
           <div className="items">
-            <img src={IconoMoneda} width="40px" height="40px" />
+            <img src={IconoMoneda} width="80px" height="80px" />
             <p>{data.currency}</p>
           </div>
         </div>

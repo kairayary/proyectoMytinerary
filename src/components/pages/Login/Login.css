@@ -11,8 +11,9 @@
       url("../../Imagen/viajar.jpeg");
     background-size: cover;
     padding-bottom: 80px;
-
+    padding-top: 2em;
   }
+  
 
   .loginTitle {
     font-size: 50px;

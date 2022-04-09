@@ -54,11 +54,11 @@ function Itineraries(props) {
                                 <div className="property-texts">
 
                                     <div className="property-textItem">
-                                        <img src={IconoPrecio} width="45px" height="45px" />
+                                        <img src={IconoPrecio} width="70px" height="70px" />
                                         <p>{itin.price}</p>
                                     </div>
                                     <div className="property-textItem">
-                                        <img src={IconoTimes} width="50px" height="50px" />
+                                        <img src={IconoTimes} width="80px" height="80px" />
                                         <p>{itin.time}</p>
                                     </div>
                                 </div>
