@@ -17,25 +17,16 @@ function CityItinerary(props) {
                         <div className=" headingItem1">
                             <div className="heading-Items">
                                 <img src={process.env.PUBLIC_URL + `/Imagenes/Flags/${data.flag}`} />
-
                             </div>
 
                             <div className="heading-Items">
                                 <h1>Itineraries</h1>
                             </div>
-
-                            {/* <div className="heading-Items">
-                            <img src={process.env.PUBLIC_URL + `/Imagenes/Flags/${data.flag}`}/>
-
-                             </div> */}
-
                             <div className="heading-Items">
                                 <img src={process.env.PUBLIC_URL + `/Imagenes/Flags/${data.flag}`} />
                             </div>
                         </div>
-                        {/* <div className="haedingTitle">
-                            <img src={mundo}  alt="" />
-                        </div> */}
+                       
                         <div className="haedingTitle">
                             <img src={MundoN}  alt="" />
                         </div>

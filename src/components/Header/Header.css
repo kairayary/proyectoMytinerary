@@ -5,8 +5,7 @@
 .containerheader{
      background: rgb(235,200,237);
     background: linear-gradient(41deg, rgba(235,200,237,1) 29%, rgba(171,237,215,1) 57%, rgba(240,194,114,1) 90%);  
-    /* background: rgb(238,189,110);
-background: linear-gradient(336deg, rgba(238,189,110,1) 8%, rgba(131,241,171,1) 53%, rgba(216,170,60,1) 81%, rgba(250,242,65,1) 98%); */
+   
     width: 100%;
     height: 100%;
 }

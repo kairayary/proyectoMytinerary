@@ -1,9 +1,5 @@
 .city{
-    /* background: linear-gradient(
-        rgba(255, 255, 255, 0.5),
-        rgba(255, 255, 255, 0.5)
-      ),
-      url("../../Imagen/viajar.jpeg"); */
+   
 
     background: rgb(235,200,237);
     background: linear-gradient(41deg, rgba(235,200,237,1) 29%, rgba(171,237,215,1) 57%, rgba(240,194,114,1) 90%); 
