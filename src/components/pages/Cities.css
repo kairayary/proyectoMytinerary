@@ -14,15 +14,43 @@
     color: #d2691e;
     text-shadow: 0 0 2px rgb(245, 241, 7);
 }
-/* .styleSearch{
+
+.styleSearch{
+    padding-top: 5em;
+}
+.styleTexto1 p{
+    font-size: 50px;
+    left: 2.5em;
+    position:absolute ;
+    text-align: center;
+    /* margin-top: 80px; */
+    /* padding-top: 60px; */
+    font-family: 'Dancing Script', cursive;
+    color: #d2691e;
+    text-shadow: 0 0 2px rgb(245, 241, 7);
+    /* font-weight: 300; */
+}
+.styleTexto{
+    padding: 2.3em;
+}
+
+.styleTexto p{
+
+    font-size: 28px ;
+    left: 10em;
+    color: #23394d;
+    text-align: center;
+    justify-content: center;
+    text-shadow: 0 0 2px rgb(245, 241, 7);
+    /* font-weight: 200; */
     width: 100%;
-    height: 500px;
-    object-fit: none;
-    background: url(../Imagen/ruta1.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: 80%;
-} */
+    border-left:8px solid #d2691e;
+    font-weight: bold;
+    /* padding: 15px; */
+    border-bottom:2px solid #d2691e;;
+   
+} 
+
 .textocities{
     width: 100%;
     height: 350px;

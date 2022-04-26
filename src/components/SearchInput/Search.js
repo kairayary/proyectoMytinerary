@@ -14,7 +14,7 @@ function Search() {
   const handleChange =(event)=>{
     setChecked(event.target.checked);
     event.target.checked ? setFiltro(" Select the City"): setFiltro("Select the Continent")
-    console.log(event.target)
+    // console.log(event.target)
   }
 
   const [{ cities }, dispatch] = useStateValue()
@@ -25,7 +25,7 @@ function Search() {
     
     dispatch({
       type: actionType.FILTER,
-      // value: event.target.value
+
       value:{value:event.target.value, filterBy:filtro}
     })
   };

@@ -33,7 +33,11 @@ function Comment(props) {
 
     await axios.post("http://localhost:4000/api/comments", { dataComments })
       .then(response =>
-        setComment(response.data.response.comentario))
+        
+        swal({
+          text: response.data.message,
+          buttons: "ok",
+        }))
     setReload(!reload)
     // console.log(response)
   }
@@ -43,6 +47,7 @@ function Comment(props) {
     axios.get(`http://localhost:4000/api/comments/${id}`)
       .then(response => {
         setComment(response.data.response.comentario)
+        
 
       })
     // console.log(comment)
@@ -103,7 +108,7 @@ function Comment(props) {
                 <div className="AquiVaEstilo mb-2" >
                   <div className="commentUserImg">
                     <img></img>
-                    <p>{comm.user.firstname}</p>
+                    <p>{comm.user.firstname} {comm.user.lastname}</p>
                   </div>
                   {user?.id===comm.user._id?
                     <div>

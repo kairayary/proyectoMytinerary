@@ -25,7 +25,7 @@ const commentControllers = {
         } catch (error) {
             console.log(error)
         }
-        res.json({ succes: true, response: {comentario }})
+        res.json({ succes: true, response: {comentario }, message:"Your message has been sent"})
 
     },
     obtenerComentarios: async (req, res) => {
