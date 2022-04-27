@@ -39,7 +39,7 @@ const Navbar = () => {
                 type: actionType.USER,
                 user: null
             })
-            //  alert(response.data.response)
+            
              swal({
               title: "Closed Session",
               text: response.data.response,

@@ -1,5 +1,4 @@
 import React from "react";
-// import FacebookLogin from "react-facebook-login";
 import axios from "axios";
 import swal from 'sweetalert';
 import FacebookLogin from 'react-facebook-login/dist/facebook-login-render-props'

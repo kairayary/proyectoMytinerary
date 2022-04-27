@@ -25,6 +25,7 @@ function Footer() {
             <SocialMedia>
               <SocialMediaWrap>
                 <SocialLogo>MyTinerary</SocialLogo>
+                
               </SocialMediaWrap>
             </SocialMedia>
           </FooterLinksItems>
@@ -37,6 +38,9 @@ function Footer() {
             </LinkRouter>
             <LinkRouter to="/Cities">
             <FooterLink >CITIES</FooterLink>
+            </LinkRouter>
+            <LinkRouter to="/Register">
+            <FooterLink >USER</FooterLink>
             </LinkRouter>
           </FooterLinksItems>
           <FooterLinksItems>

@@ -10,7 +10,7 @@ import SaoPaulo from "../Imagen/SaoPaulo.jpeg";
 import { AiTwotoneLike } from "react-icons/ai";
 import { FaRegComment } from "react-icons/fa";
 import gifscamara from "../Imagen/gifscamara.gif"
-import { borderRadius } from "@mui/system";
+
 
 function Header() {
   return (
@@ -30,9 +30,6 @@ function Header() {
           </div>
           <div className="headerComment">
             
-            <div className="headerCommentImg">
-              {/* <img src={} width="90%" height="480" alt="" /> */}
-            </div>
           </div>
           <div className="headerFrase">
             <div className="headerFrase1">

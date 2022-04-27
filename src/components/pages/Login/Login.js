@@ -54,13 +54,7 @@ function Login() {
          icon: "success",
        });
      }
-      // else { 
-      
-      //   swal({
-      //     title: "Welcome",
-      //     text: response.profileObj.name,
-      //     icon: "success",
-      //   });
+    
 
 
       //   console.log(data)
@@ -70,15 +64,6 @@ function Login() {
         type: actionType.USER,
         user: data.response// asi lo envio como se va a guardar en mi base, todo el objeto completo(token,datos,etc)
       })
-
-
-      //  if(data.success==="falseVAL"){
-      //    console.log(data)
-      //   console.log(data.response.error.details)
-      //  alert(data.response.error.details.map(error=>error.message))
-      //  }else if(data.success==="trueUE"){
-      //    console.log(data)
-      //  }
 
     }
     console.log(user)
@@ -131,15 +116,6 @@ function Login() {
         user: data.response// asi lo envio como se va a guardar en mi base, todo el objeto completo(token,datos,etc)
       })
 
-
-      //  if(data.success==="falseVAL"){
-      //    console.log(data)
-      //   console.log(data.response.error.details)
-      //  alert(data.response.error.details.map(error=>error.message))
-      //  }else if(data.success==="trueUE"){
-      //    console.log(data)
-      //  }
-
     }
     console.log(user)//user si se mete dentro del estado de un array tiene q ser un array con un objeto con un length.[0]
   }
@@ -178,31 +154,14 @@ function Login() {
      }
 
 
-    //   else {swal({
-    //     title: "Welcome",
-    //     text: response.name,
-    //     icon: "success",
-    //   });
-
-
-    //   console.log(data)
-    // console.log(response) }
-
       dispatch({ //manda el dato al entorno
         type: actionType.USER,
         user: data.response// asi lo envio como se va a guardar en mi base, todo el objeto completo(token,datos,etc)
       })
 
-      //  if(data.success==="falseVAL"){
-      //    console.log(data)
-      //   console.log(data.response.error.details)
-      //  alert(data.response.error.details.map(error=>error.message))
-      //  }else if(data.success==="trueUE"){
-      //    console.log(data)
-      //  }
 
     }
-    console.log(user)
+    // console.log(user)
 
   }
   return (

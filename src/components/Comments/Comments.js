@@ -4,7 +4,6 @@ import axios from "axios";
 import "./Comments.css"
 import { FaTrashAlt } from "react-icons/fa";
 import { MdCreate } from "react-icons/md";
-import { Avatar } from "@material-ui/core"
 import swal from 'sweetalert';
 
 function Comment(props) {

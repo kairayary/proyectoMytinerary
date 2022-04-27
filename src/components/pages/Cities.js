@@ -25,7 +25,10 @@ function Cities(props) {
 
         <div className="styleTexto">
           <p>For those who travel, for those who traveled, for those who will travel, for those who go, for those who return,
-            for those who want to go, for those who do not want to return, and also for those who do not travel, so that they know what that are lost, perhaps they will change their minds.</p>
+            for those who want to go, for those who do not want to return, and also for those who do not travel,
+             so that they know what that are lost, perhaps they will change their minds...
+            Dream your trip and travel like in your dreams!!!</p>
+
         </div>
         <div className="styleTexto1"><p>Here there are places for everyone... you just have to choose yours</p></div>
         
