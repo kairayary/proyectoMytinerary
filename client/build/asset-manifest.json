@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a222b017.css",
+    "main.js": "/static/js/main.27ce5dae.js",
+    "static/media/gifscamara.gif": "/static/media/gifscamara.e0afb7f80bb572f7ad80.gif",
+    "static/media/Tanza.Africa.jpg": "/static/media/Tanza.Africa.cff00c0efe76049b953e.jpg",
+    "static/media/Canada.America.jpg": "/static/media/Canada.America.0465364d1a770ec1c161.jpg",
+    "static/media/viajar.jpeg": "/static/media/viajar.23368b04e8fdbd2af9fa.jpeg",
+    "static/media/IconoContinente.png": "/static/media/IconoContinente.a0c2e0b98c9bb201c16d.png",
+    "static/media/Australia.Oceania.jpg": "/static/media/Australia.Oceania.b93ac03467a4932666e7.jpg",
+    "static/media/MundoN.gif": "/static/media/MundoN.5ba95fb2ad83d81224e5.gif",
+    "static/media/ruta2.png": "/static/media/ruta2.6a309e4dc9c7c050cf7d.png",
+    "static/media/IconoPrecio.png": "/static/media/IconoPrecio.c60343d6a9e6f433668c.png",
+    "static/media/IconoTimes.png": "/static/media/IconoTimes.ae14b3d899902c3213f7.png",
+    "static/media/Vietnam.jpg": "/static/media/Vietnam.aa6b528fcf325a381881.jpg",
+    "static/media/IconoMoneda.png": "/static/media/IconoMoneda.22be18e3b3c8180b343a.png",
+    "static/media/China.Asia.jpg": "/static/media/China.Asia.adcb4728dbd5a5bbcb00.jpg",
+    "static/media/IconoLengua.png": "/static/media/IconoLengua.2c3a9f41d415e7cef636.png",
+    "static/media/Austria.Europa.jpg": "/static/media/Austria.Europa.30aae5fe2a335a85319b.jpg",
+    "static/media/ruta1.png": "/static/media/ruta1.f47d2ccb93016073ad77.png",
+    "static/media/Singapur.Asia.jpg": "/static/media/Singapur.Asia.e9ce181cebcd2799df54.jpg",
+    "static/media/SaoPaulo.jpeg": "/static/media/SaoPaulo.514d50d5e61cd8cd531f.jpeg",
+    "static/media/Egipto.Africa.jpg": "/static/media/Egipto.Africa.b6649c5bce401c5267a8.jpg",
+    "static/media/Suiza.Europa.jpg": "/static/media/Suiza.Europa.5c870317cf785369e12e.jpg",
+    "static/media/Paris.Europa.jpg": "/static/media/Paris.Europa.0672656ef24df93007cb.jpg",
+    "static/media/Polinesia.Oceania.jpg": "/static/media/Polinesia.Oceania.69cd56b9628f475410ff.jpg",
+    "index.html": "/index.html",
+    "main.a222b017.css.map": "/static/css/main.a222b017.css.map",
+    "main.27ce5dae.js.map": "/static/js/main.27ce5dae.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a222b017.css",
+    "static/js/main.27ce5dae.js"
+  ]
+}
