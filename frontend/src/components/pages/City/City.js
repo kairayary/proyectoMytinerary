@@ -20,7 +20,7 @@ function City() {
   useEffect(() => {
 
     citySelecter.map(city =>
-      axios.get(`http://localhost:4000/api/itinerary/${city.name}`)
+      axios.get(`https://kairamytinerary.herokuapp.com/api/itinerary/${city.name}`)
         .then(response => setItineraries(response.data.response.itinerary)
         )
     )

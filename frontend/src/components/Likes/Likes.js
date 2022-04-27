@@ -15,7 +15,7 @@ function Likes(props) {//estas props las traigo de itineraries que tengo el lamd
         const token = localStorage.getItem("token") 
         console.log(user)
      //se busca el user porque cuando porque cuando se carga el token hace un dispatch con el id del usuario, y traemos pou useStateValue al user
-        await axios.put(`http://localhost:4000/api/likesDislike/${props.id}`,{},{
+        await axios.put(`https://kairamytinerary.herokuapp.com/api/likesDislike/${props.id}`,{},{
             headers: {
     
               "Authorization": "Bearer " +token//método de autorización estandar q permite autenticar y autorizar al usuario

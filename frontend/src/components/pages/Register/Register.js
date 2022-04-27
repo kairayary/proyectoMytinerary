@@ -23,7 +23,7 @@ function Register() {
     // console.log(event)
 
 
-       await axios.post("http://localhost:4000/api/signup",{NuevoUsuario})
+       await axios.post("https://kairamytinerary.herokuapp.com/api/signup",{NuevoUsuario})
       .then(response => //alert(response.data.response))
            //  if (response.success === "falseVAL"){
           // console.log(response.data)

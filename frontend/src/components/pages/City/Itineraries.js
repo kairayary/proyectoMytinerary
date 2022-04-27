@@ -25,19 +25,9 @@ function Itineraries(props) {
 
                                 <div className="property-image"  >
                                     <img src={process.env.PUBLIC_URL + `/Imagenes/Itinerary/${itin.img}`} className="property-image1" height={400} width={500} />
-                                    {/* <div className="property-image-title">
-                                    
-                                </div> */}
+                                 
                                 </div>
-                                {/* <div className="property-description"> */}
-                                    {/* <h2>{itin.city}</h2>
-                                    <h4>{itin.name}</h4>  */}
-
-                                {/* </div> */}
-
-                                {/* <div className="property-social-icons">
-                                   
-                            </div>   */}
+                              
 
                             </div>
                             <div className="property-content">
@@ -64,8 +54,6 @@ function Itineraries(props) {
                                 </div>
                                 <div className="property-bottoms">
 
-                                    {/* <button className="comment-btn">Comments</button> */}
-                                    {/* <button className="likes-btn">Likes</button>   */}
 
                                 </div>
                                 {/* el valor de itin._id se lo paso como props a al componente Comments */}

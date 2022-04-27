@@ -18,7 +18,7 @@ function Facebook() {
         }
 
 
-        await axios.post("http://localhost:4000/api/signup", { NuevoUsuario })
+        await axios.post("https://kairamytinerary.herokuapp.com/api/signup", { NuevoUsuario })
             .then(response => //alert(response.data.response))
             
                 displayMessages(response.data) //para validar los datos

@@ -28,7 +28,7 @@ function App() {
 
   useEffect(() => {
 
-    axios.get("http://localhost:4000/api/datos").then(response => {
+    axios.get("https://kairamytinerary.herokuapp.com/api/datos").then(response => {
       dispatch({// manda el dato al entorno
         type: actionType.CITIESDB,
         cities: response.data.response.cities
@@ -39,7 +39,7 @@ function App() {
     if (localStorage.getItem("token") !== null) {
       const token = localStorage.getItem("token") //aqui capturo el valor del token
       // si existe hace una llamada a axios
-        axios.get("http://localhost:4000/api/signinToken", {
+        axios.get("https://kairamytinerary.herokuapp.com/api/signinToken", {
         // aqui pasamos un valor llamado las cabeceras de envio,(veniamos pasando params al final de las rutas, un objeto cuando dabamos de alta un usuario)
         headers: {
 

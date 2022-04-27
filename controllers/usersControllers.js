@@ -33,7 +33,7 @@ async function sendEmail(email, uniqueText) {
            </br>
            <h2 style="color:#000000; font-style: 20px; text-align:center;"> Click<a 
            style ="color:#23394d; font-style:"Oswald"
-           PRESS<a href=http://localhost:4000/api/verify/${uniqueText}>HERE</a>TO VALIDATE YOUR E-MAIL
+           PRESS<a href=https://kairamytinerary.herokuapp.com/api/verify/${uniqueText}>HERE</a>TO VALIDATE YOUR E-MAIL
            </br>
            </br>
            <h6 style="color: #a03a9e; font-size: 12px;text-align: center;">All Rights Reserved Copyright - 2022</h6>
@@ -57,7 +57,7 @@ const usersControllers = {
         if (user) {
             user.emailVerificado = true
             await user.save()
-            res.redirect("http://localhost:3000/login")
+            res.redirect("https://kairamytinerary.herokuapp.com/login")
         } else {
             res.json({ success: false, response: "It has not been possible to verfy your email" })
         }
