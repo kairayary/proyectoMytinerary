@@ -30,7 +30,7 @@ const Navbar = () => {
        console.log(user)
       const email= user.email
       console.log(email)
-      await axios.post("http://localhost:4000/api/signout", {email})//paso el parametro para que su funcion lo busque y va a dar la respuesta de que el usuario se descpnecto
+      await axios.post("https://kairamytinerary.herokuapp.com/api/signout", {email})//paso el parametro para que su funcion lo busque y va a dar la respuesta de que el usuario se descpnecto
       .then(response => {
         console.log(response)
         if (response.data.success) {
