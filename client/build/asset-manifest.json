@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.a222b017.css",
-    "main.js": "/static/js/main.11fea7c6.js",
+    "main.js": "/static/js/main.1e48a6ab.js",
     "static/media/gifscamara.gif": "/static/media/gifscamara.e0afb7f80bb572f7ad80.gif",
     "static/media/Tanza.Africa.jpg": "/static/media/Tanza.Africa.cff00c0efe76049b953e.jpg",
     "static/media/Canada.America.jpg": "/static/media/Canada.America.0465364d1a770ec1c161.jpg",
@@ -26,10 +26,10 @@
     "static/media/Polinesia.Oceania.jpg": "/static/media/Polinesia.Oceania.69cd56b9628f475410ff.jpg",
     "index.html": "/index.html",
     "main.a222b017.css.map": "/static/css/main.a222b017.css.map",
-    "main.11fea7c6.js.map": "/static/js/main.11fea7c6.js.map"
+    "main.1e48a6ab.js.map": "/static/js/main.1e48a6ab.js.map"
   },
   "entrypoints": [
     "static/css/main.a222b017.css",
-    "static/js/main.11fea7c6.js"
+    "static/js/main.1e48a6ab.js"
   ]
 }
